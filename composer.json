@@ -1,0 +1,33 @@
+{
+    "name": "kvapay/kvapay-magento2-plugin",
+    "type": "magento2-module",
+    "description": "Bitcoin and Altcoin Payment Gateway for Magento 2 via KvaPay",
+    "version": "1.0.0",
+    "keywords": [
+      "kvapay",
+      "bitcoin",
+      "merchant",
+      "magento",
+      "btc",
+      "ethereum",
+      "litecoin",
+      "eth",
+      "ltc",
+      "ripple",
+      "xrp",
+      "payment",
+      "altcoin",
+      "altcoins"
+    ],
+    "homepage": "https://kvapay.com",
+    "license": "MIT",
+    "require": {
+        "kvapay/kvapay-php": "1.0.*"
+    },
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "KvaPay\\Merchant\\": ""
+        }
+    }
+}

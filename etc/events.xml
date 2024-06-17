@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    KvaPay
+ * @package     KvaPay_Merchant
+ * @author      KvaPay
+ * @copyright   KvaPay (https://kvapay.com)
+ * @license     https://github.com/kvapay/magento2-plugin/blob/master/LICENSE The MIT License (MIT)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="kvapay_merchant_callback_send">
+        <observer name="create_invoice" instance="KvaPay\Merchant\Observer\CreateInvoice" />
+    </event>
+</config>

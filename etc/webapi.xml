@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    KvaPay
+ * @package     KvaPay_Merchant
+ * @author      KvaPay
+ * @copyright   KvaPay (https://kvapay.com)
+ * @license     https://github.com/kvapay/magento2-plugin/blob/master/LICENSE The MIT License (MIT)
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/kvapay/place_order" method="POST">
+        <service class="KvaPay\Merchant\Api\PaymentInterface" method="placeOrder"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+</routes>
