@@ -1,5 +1,5 @@
 {
-    "name": "kvapay/kvapay-magento2-plugin",
+    "name": "kvapay/magento2-plugin",
     "type": "magento2-module",
     "description": "Bitcoin and Altcoin Payment Gateway for Magento 2 via KvaPay",
     "version": "1.0.0",
