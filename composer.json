@@ -22,7 +22,7 @@
     "homepage": "https://kvapay.com",
     "license": "MIT",
     "require": {
-        "kvapay/kvapay-php": "1.0.*"
+        "kvapay/kvapay-php": "^1.0"
     },
     "autoload": {
         "files": [ "registration.php" ],

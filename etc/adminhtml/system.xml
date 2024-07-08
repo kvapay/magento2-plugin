@@ -43,7 +43,7 @@
                        showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Test Mode</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Please note, that for Sandbox mode you must generate separate API credentials on dev.kvapay.com. API credentials generated on kvapay.com will not work for Test mode.</comment>
+                    <comment>Please note, that for Sandbox mode you must generate separate API credentials on dev.crypay.com. API credentials generated on kvapay.com will not work for Test mode.</comment>
                 </field>
                 <field id="allowspecific" translate="label" type="allowspecific" sortOrder="60"
                        showInDefault="1" showInWebsite="1" showInStore="0">
