@@ -30,7 +30,7 @@ class Payment implements PaymentInterface
     private CheckoutSession $checkoutSession;
     private OrderRepository $orderRepository;
     private CartRepositoryInterface $quoteRepository;
-    private KvaPayPayment $cryPayPayment;
+    private KvaPayPayment $kvaPayPayment;
     private LoggerInterface $logger;
 
     /**
@@ -38,7 +38,7 @@ class Payment implements PaymentInterface
      * @param CheckoutSession $checkoutSession
      * @param OrderRepository $orderRepository
      * @param CartRepositoryInterface $quoteRepository
-     * @param KvaPayPayment $cryPayPayment
+     * @param KvaPayPayment $kvaPayPayment
      * @param LoggerInterface $logger
      */
     public function __construct(
@@ -46,14 +46,14 @@ class Payment implements PaymentInterface
         CheckoutSession $checkoutSession,
         OrderRepository $orderRepository,
         CartRepositoryInterface $quoteRepository,
-        KvaPayPayment $cryPayPayment,
+        KvaPayPayment $kvaPayPayment,
         LoggerInterface $logger
     ) {
         $this->response = $response;
         $this->checkoutSession = $checkoutSession;
         $this->orderRepository = $orderRepository;
         $this->quoteRepository = $quoteRepository;
-        $this->cryPayPayment = $cryPayPayment;
+        $this->kvaPayPayment = $kvaPayPayment;
         $this->logger = $logger;
     }
 
@@ -82,7 +82,7 @@ class Payment implements PaymentInterface
         $quote = $this->quoteRepository->get($order->getQuoteId());
         $quote->setIsActive(1);
         $this->quoteRepository->save($quote);
-        $cgOrder = $this->cryPayPayment->getKvaPayOrder($order);
+        $cgOrder = $this->kvaPayPayment->getKvaPayOrder($order);
 
         if (!$cgOrder) {
             $this->response->setStatus(false);
