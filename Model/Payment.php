@@ -116,7 +116,7 @@ class Payment
         $client = $this->getClient();
 
         try {
-            $cgOrder = $client->payment->create($params);
+            $cgOrder = $client->payment->createPaymentShortLink($params);
         } catch (ApiErrorException $exception) {
             $this->logger->critical($exception->getMessage());
 
